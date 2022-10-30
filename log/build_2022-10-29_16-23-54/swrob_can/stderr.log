@@ -1,0 +1,5 @@
+  File "/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can/CAN_Recv.py", line 7
+    import .CAN_Send
+           ^
+SyntaxError: invalid syntax
+

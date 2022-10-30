@@ -1,0 +1,7 @@
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+  File "/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can/canbus.py", line 14
+    def timer_callback(self)
+                            ^
+SyntaxError: expected ':'
+

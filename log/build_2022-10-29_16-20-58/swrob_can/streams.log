@@ -1,0 +1,24 @@
+[0.358s] Invoking command in '/home/peng/swrob_ws/src/swrob_can': PYTHONPATH=/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/peng/swrob_ws/build/swrob_can/build install --prefix /home/peng/swrob_ws/install/swrob_can --record /home/peng/swrob_ws/build/swrob_can/install.log --single-version-externally-managed
+[0.496s] running egg_info
+[0.496s] writing ../../build/swrob_can/swrob_can.egg-info/PKG-INFO
+[0.496s] writing dependency_links to ../../build/swrob_can/swrob_can.egg-info/dependency_links.txt
+[0.497s] writing entry points to ../../build/swrob_can/swrob_can.egg-info/entry_points.txt
+[0.497s] writing requirements to ../../build/swrob_can/swrob_can.egg-info/requires.txt
+[0.497s] writing top-level names to ../../build/swrob_can/swrob_can.egg-info/top_level.txt
+[0.498s] reading manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+[0.499s] writing manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+[0.499s] running build
+[0.499s] running build_py
+[0.499s] copying swrob_can/canbus.py -> /home/peng/swrob_ws/build/swrob_can/build/lib/swrob_can
+[0.499s] running install
+[0.500s] running install_lib
+[0.500s] copying /home/peng/swrob_ws/build/swrob_can/build/lib/swrob_can/canbus.py -> /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can
+[0.501s] byte-compiling /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can/canbus.py to canbus.cpython-310.pyc
+[0.501s] running install_data
+[0.502s] running install_egg_info
+[0.503s] removing '/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info' (and everything under it)
+[0.503s] Copying ../../build/swrob_can/swrob_can.egg-info to /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info
+[0.504s] running install_scripts
+[0.520s] Installing canbus_node script to /home/peng/swrob_ws/install/swrob_can/lib/swrob_can
+[0.521s] writing list of installed files to '/home/peng/swrob_ws/build/swrob_can/install.log'
+[0.541s] Invoked command in '/home/peng/swrob_ws/src/swrob_can' returned '0': PYTHONPATH=/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/peng/swrob_ws/build/swrob_can/build install --prefix /home/peng/swrob_ws/install/swrob_can --record /home/peng/swrob_ws/build/swrob_can/install.log --single-version-externally-managed

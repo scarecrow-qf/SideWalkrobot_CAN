@@ -1,0 +1,21 @@
+[0.413s] Invoking command in '/home/peng/swrob_ws/src/swrob_can': PYTHONPATH=/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/peng/swrob_ws/build/swrob_can/build install --prefix /home/peng/swrob_ws/install/swrob_can --record /home/peng/swrob_ws/build/swrob_can/install.log --single-version-externally-managed
+[0.591s] running egg_info
+[0.592s] writing ../../build/swrob_can/swrob_can.egg-info/PKG-INFO
+[0.592s] writing dependency_links to ../../build/swrob_can/swrob_can.egg-info/dependency_links.txt
+[0.592s] writing entry points to ../../build/swrob_can/swrob_can.egg-info/entry_points.txt
+[0.592s] writing requirements to ../../build/swrob_can/swrob_can.egg-info/requires.txt
+[0.592s] writing top-level names to ../../build/swrob_can/swrob_can.egg-info/top_level.txt
+[0.593s] reading manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+[0.594s] writing manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+[0.594s] running build
+[0.594s] running build_py
+[0.594s] running install
+[0.595s] running install_lib
+[0.596s] running install_data
+[0.596s] running install_egg_info
+[0.597s] removing '/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info' (and everything under it)
+[0.597s] Copying ../../build/swrob_can/swrob_can.egg-info to /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info
+[0.598s] running install_scripts
+[0.612s] Installing canbus_node script to /home/peng/swrob_ws/install/swrob_can/lib/swrob_can
+[0.612s] writing list of installed files to '/home/peng/swrob_ws/build/swrob_can/install.log'
+[0.627s] Invoked command in '/home/peng/swrob_ws/src/swrob_can' returned '0': PYTHONPATH=/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/peng/swrob_ws/build/swrob_can/build install --prefix /home/peng/swrob_ws/install/swrob_can --record /home/peng/swrob_ws/build/swrob_can/install.log --single-version-externally-managed

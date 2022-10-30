@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/swrob_can/swrob_can.egg-info/PKG-INFO
+writing dependency_links to ../../build/swrob_can/swrob_can.egg-info/dependency_links.txt
+writing entry points to ../../build/swrob_can/swrob_can.egg-info/entry_points.txt
+writing requirements to ../../build/swrob_can/swrob_can.egg-info/requires.txt
+writing top-level names to ../../build/swrob_can/swrob_can.egg-info/top_level.txt
+reading manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+writing manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+running build
+running build_py
+copying swrob_can/CAN_Recv.py -> /home/peng/swrob_ws/build/swrob_can/build/lib/swrob_can
+copying swrob_can/canbus.py -> /home/peng/swrob_ws/build/swrob_can/build/lib/swrob_can
+running install
+running install_lib
+copying /home/peng/swrob_ws/build/swrob_can/build/lib/swrob_can/CAN_Recv.py -> /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can
+copying /home/peng/swrob_ws/build/swrob_can/build/lib/swrob_can/canbus.py -> /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can
+byte-compiling /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can/CAN_Recv.py to CAN_Recv.cpython-310.pyc
+byte-compiling /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can/canbus.py to canbus.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/swrob_can/swrob_can.egg-info to /home/peng/swrob_ws/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info
+running install_scripts
+Installing canbus_node script to /home/peng/swrob_ws/install/swrob_can/lib/swrob_can
+writing list of installed files to '/home/peng/swrob_ws/build/swrob_can/install.log'
