@@ -1,6 +1,0 @@
-source;share/swrob_can/hook/pythonpath.ps1
-source;share/swrob_can/hook/pythonpath.dsv
-source;share/swrob_can/hook/pythonpath.sh
-source;share/swrob_can/hook/ament_prefix_path.ps1
-source;share/swrob_can/hook/ament_prefix_path.dsv
-source;share/swrob_can/hook/ament_prefix_path.sh

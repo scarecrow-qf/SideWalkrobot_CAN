@@ -47,7 +47,7 @@ class CanBus(Node):
         if message.data[0]==1:
             Motor_Stop_Control("can0", message.data[1])
         if message.data[0]==2:
-            PWM_Control("can0", message.data[1])
+            PWM_Control("can0", int(message.data[1]))
         if message.data[0]==3:
             Speed_Control("can0", message.data[1])
         if message.data[0]==4:

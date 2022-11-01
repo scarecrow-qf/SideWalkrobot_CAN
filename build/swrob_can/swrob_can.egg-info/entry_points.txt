@@ -1,3 +1,0 @@
-[console_scripts]
-canbus_node = swrob_can.canbus:main
-

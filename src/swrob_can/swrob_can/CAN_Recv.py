@@ -7,7 +7,8 @@ from can.notifier import MessageRecipient
 from .CAN_Send import*
 from .Monitor import*
 Motor1 = Motor_Monitor('left', 0x602, 'can0')
-
+# The motor ID. 
+CAN_ID = [0x602, 0x603]
 
 Receive_Package = {
     'CAN_ID': 0x00,
@@ -76,7 +77,8 @@ def Unpack_Packages(msg) -> Receive_Package:
 
 def Read_Data(CAN_Channel, Index_num):
     # the data is invalid. Doesn't matter
-    Send_Package(CAN_Channel, 5, Index_num, [0x00,0x00,0x00,0x00])
+    Send_Package(CAN_ID[0] ,CAN_Channel, 5, Index_num, [0x00,0x00,0x00,0x00])
+    Send_Package(CAN_ID[1] ,CAN_Channel, 5, Index_num, [0x00,0x00,0x00,0x00])
 
 
 def Solve_Message(msg: can.Message) -> None:

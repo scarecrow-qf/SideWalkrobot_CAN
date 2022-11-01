@@ -3,9 +3,9 @@ import can
 import sys
 
 # The motor ID. 
-CAN_ID = [0x602,0x603]
+CAN_ID = [0x602, 0x603]
 
-def Send_Package(CAN_Channel, Write_Byte_Num, Index_num, data):
+def Send_Package(CAN_ID, CAN_Channel, Write_Byte_Num, Index_num, data):
     '''
     基本描述
     Author: Liu Yuxiang 
@@ -77,15 +77,17 @@ def PWM_Control(CAN_Channel, PWM_Duty_Cycle):
     :PWM_Duty_Cycle: -1000 ~ 1000
     '''
     # set mode as PWM control
-    Send_Package(CAN_Channel, 1, 0x2000, [0x00,0x00,0x00,0x00])
-    # set PWM_Duty_Cycle
+    Send_Package(CAN_ID[0], CAN_Channel, 1, 0x2000, [0x00,0x00,0x00,0x00])
+    Send_Package(CAN_ID[1], CAN_Channel, 1, 0x2000, [0x00,0x00,0x00,0x00])
+    # set PWM_Duty_Cycle 
     data = [0x00,0x00,0x00,0x00]
     # Put lower byte in front
     for i in range(0,4):
         digit = i*8
         data[i] = (PWM_Duty_Cycle >> digit) & 0xFF
     # Send message
-    Send_Package(CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_ID[0], CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_ID[1], CAN_Channel, 4, 0x2001, data)
 
 
 
@@ -99,20 +101,22 @@ def Speed_Control(CAN_Channel, Speed):
     :Speed: -max speed ~ max speed(-500-500)
     '''
     # set mode as speed control mode
-    Send_Package(CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
-
+    Send_Package(CAN_ID[0], CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
+    Send_Package(CAN_ID[1], CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
     # Setting register 0x0077 as 45. Because the number of motor poles is 45.
     # And the parameter can be set by GUI tool, So we do not need set.
 
     # Setting register 0x200A as 1 which change the motor mode to RPM control mode
-    Send_Package(CAN_Channel, 1, 0x200A, [0x01,0x00,0x00,0x00])
+    Send_Package(CAN_ID[0], CAN_Channel, 1, 0x200A, [0x01,0x00,0x00,0x00])
+    Send_Package(CAN_ID[1], CAN_Channel, 1, 0x200A, [0x01,0x00,0x00,0x00])
     data = [0x00,0x00,0x00,0x00]
     # Put lower byte in front
     for i in range(0,4):
         digit = i*8
         data[i] = (Speed >> digit) & 0xFF
     # Send message
-    Send_Package(CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_ID[0], CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_ID[1], CAN_Channel, 4, 0x2001, data)
 
 
 def Torque_Control(CAN_Channel, Current):
