@@ -2,8 +2,10 @@ import os
 import can
 import sys
 
+# The motor ID. 
+CAN_ID = [0x602,0x603]
 
-def Send_Package(CAN_ID, CAN_Channel, Write_Byte_Num, Index_num, data):
+def Send_Package(CAN_Channel, Write_Byte_Num, Index_num, data):
     '''
     基本描述
     Author: Liu Yuxiang 
@@ -41,7 +43,7 @@ def Send_Package(CAN_ID, CAN_Channel, Write_Byte_Num, Index_num, data):
     # Do not close CAN
 
 
-def Motor_Stop_Control(CAN_ID, CAN_Channel, Stop_Mode):
+def Motor_Stop_Control(CAN_Channel, Stop_Mode):
     '''
     Author: Liu Yuxiang 
     Time: 2022.10.14
@@ -57,13 +59,13 @@ def Motor_Stop_Control(CAN_ID, CAN_Channel, Stop_Mode):
     '''
     for index,ID in enumerate(CAN_ID):
         if Stop_Mode == 'Normal':
-            Send_Package(ID, CAN_Channel, 1, 0x2000, [0x10,0x00,0x00,0x00])
+            Send_Package(CAN_Channel, 1, 0x2000, [0x10,0x00,0x00,0x00])
         elif Stop_Mode == 'Emergency':
-            Send_Package(ID, CAN_Channel, 1, 0x2000, [0x11,0x00,0x00,0x00])
+            Send_Package(CAN_Channel, 1, 0x2000, [0x11,0x00,0x00,0x00])
         elif Stop_Mode == 'Free':
-            Send_Package(ID, CAN_Channel, 1, 0x2000, [0x12,0x00,0x00,0x00])
+            Send_Package(CAN_Channel, 1, 0x2000, [0x12,0x00,0x00,0x00])
 
-def PWM_Contorl(CAN_ID, CAN_Channel, PWM_Duty_Cycle):
+def PWM_Control(CAN_Channel, PWM_Duty_Cycle):
     '''
     Author: Liu Yuxiang 
     Time: 2022.10.13
@@ -75,7 +77,7 @@ def PWM_Contorl(CAN_ID, CAN_Channel, PWM_Duty_Cycle):
     :PWM_Duty_Cycle: -1000 ~ 1000
     '''
     # set mode as PWM control
-    Send_Package(CAN_ID, CAN_Channel, 1, 0x2000, [0x00,0x00,0x00,0x00])
+    Send_Package(CAN_Channel, 1, 0x2000, [0x00,0x00,0x00,0x00])
     # set PWM_Duty_Cycle
     data = [0x00,0x00,0x00,0x00]
     # Put lower byte in front
@@ -83,11 +85,11 @@ def PWM_Contorl(CAN_ID, CAN_Channel, PWM_Duty_Cycle):
         digit = i*8
         data[i] = (PWM_Duty_Cycle >> digit) & 0xFF
     # Send message
-    Send_Package(CAN_ID, CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_Channel, 4, 0x2001, data)
 
 
 
-def Speed_Contorl(CAN_ID, CAN_Channel, Speed):
+def Speed_Control(CAN_Channel, Speed):
     '''
     Author: Liu Yuxiang 
     Time: 2022.10.14
@@ -97,23 +99,23 @@ def Speed_Contorl(CAN_ID, CAN_Channel, Speed):
     :Speed: -max speed ~ max speed(-500-500)
     '''
     # set mode as speed control mode
-    Send_Package(CAN_ID, CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
+    Send_Package(CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
 
     # Setting register 0x0077 as 45. Because the number of motor poles is 45.
     # And the parameter can be set by GUI tool, So we do not need set.
 
     # Setting register 0x200A as 1 which change the motor mode to RPM control mode
-    Send_Package(CAN_ID, CAN_Channel, 1, 0x200A, [0x01,0x00,0x00,0x00])
+    Send_Package(CAN_Channel, 1, 0x200A, [0x01,0x00,0x00,0x00])
     data = [0x00,0x00,0x00,0x00]
     # Put lower byte in front
     for i in range(0,4):
         digit = i*8
         data[i] = (Speed >> digit) & 0xFF
     # Send message
-    Send_Package(CAN_ID, CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_Channel, 4, 0x2001, data)
 
 
-def Torque_Contorl(CAN_ID, CAN_Channel, Current):
+def Torque_Control(CAN_Channel, Current):
     '''
     Author: Liu Yuxiang 
     Time: 2022.10.14
@@ -123,7 +125,7 @@ def Torque_Contorl(CAN_ID, CAN_Channel, Current):
     :Current: -max current ~ max current(set by youself)
     '''
     # set mode as torque control mode
-    Send_Package(CAN_ID, CAN_Channel, 1, 0x2000, [0x02,0x00,0x00,0x00])
+    Send_Package(CAN_Channel, 1, 0x2000, [0x02,0x00,0x00,0x00])
 
     # The actual current is the send_data*0.01(A)
     data = [0x00,0x00,0x00,0x00]
@@ -132,12 +134,12 @@ def Torque_Contorl(CAN_ID, CAN_Channel, Current):
         digit = i*8
         data[i] = (Current >> digit) & 0xFF
     # Send message
-    Send_Package(CAN_ID, CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_Channel, 4, 0x2001, data)
 
 def Angle_continuity():
     angle = 0
     return angle
-def Position_Contorl(CAN_ID, CAN_Channel, Location_Type, Target_Location):
+def Position_Contorl(CAN_Channel, Location_Type, Target_Location):
     '''
     Author: Liu Yuxiang 
     Time: 2022.10.14
@@ -150,24 +152,24 @@ def Position_Contorl(CAN_ID, CAN_Channel, Location_Type, Target_Location):
     :Target_Location(unit: degree)
     '''
     # set mode as postion control mode
-    Send_Package(CAN_ID, CAN_Channel, 1, 0x2000, [0x03,0x00,0x00,0x00])
+    Send_Package(CAN_Channel, 1, 0x2000, [0x03,0x00,0x00,0x00])
     # set location control type
     if Location_Type == 'Absolute':
         # set absolute type 
-        Send_Package(CAN_ID, CAN_Channel, 1, 0x2002, [0x00,0x00,0x00,0x00])
+        Send_Package(CAN_Channel, 1, 0x2002, [0x00,0x00,0x00,0x00])
 
         '''
         角度连续化需要写的代码
         以及和监控台的代码相比较
         '''
         # set target location
-        Send_Package(CAN_ID, CAN_Channel, 1, 0x2003, [0x00,0x00,0x00,0x00])
+        Send_Package(CAN_Channel, 1, 0x2003, [0x00,0x00,0x00,0x00])
 
 
     # if the type is relative
     else:
         # set absolute type control mode 
-        Send_Package(CAN_ID, CAN_Channel, 1, 0x2002, [0x01,0x00,0x00,0x00])
+        Send_Package(CAN_Channel, 1, 0x2002, [0x01,0x00,0x00,0x00])
 
         '''
         角度连续化需要写的代码
@@ -181,7 +183,7 @@ def Position_Contorl(CAN_ID, CAN_Channel, Location_Type, Target_Location):
             digit = i*8
             data[i] = (Target_Location >> digit) & 0xFF
         # Send message
-        Send_Package(CAN_ID, CAN_Channel, 4, 0x2001, data)
+        Send_Package(CAN_Channel, 4, 0x2001, data)
 
 
 

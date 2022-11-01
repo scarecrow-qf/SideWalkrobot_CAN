@@ -8,6 +8,7 @@ from .CAN_Send import*
 from .Monitor import*
 Motor1 = Motor_Monitor('left', 0x602, 'can0')
 
+
 Receive_Package = {
     'CAN_ID': 0x00,
     'status': 0x00,
@@ -73,9 +74,9 @@ def Unpack_Packages(msg) -> Receive_Package:
         return Receive_Package
 
 
-def Read_Data(CAN_ID, CAN_Channel, Index_num):
+def Read_Data(CAN_Channel, Index_num):
     # the data is invalid. Doesn't matter
-    Send_Package(CAN_ID, CAN_Channel, 5, Index_num, [0x00,0x00,0x00,0x00])
+    Send_Package(CAN_Channel, 5, Index_num, [0x00,0x00,0x00,0x00])
 
 
 def Solve_Message(msg: can.Message) -> None:
@@ -112,7 +113,7 @@ async def main() -> None:
         # Start sending first message
         print("Getting messages...")
         for key, value in MotorState_dict.items():
-            Read_Data(0x602, 'can0', key)
+            Read_Data('can0', key)
             # Wait for next message from AsyncBufferedReader
             msg = await reader.get_message()
             # Delay response

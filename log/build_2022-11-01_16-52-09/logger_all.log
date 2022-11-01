@@ -1,0 +1,199 @@
+[0.166s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.166s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f3fb14f53c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f3fb14f4e50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f3fb14f4e50>>)
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.200s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lyx/Desktop/pc/SideWalkrobot_CAN'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/can_interfaces) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package 'src/can_interfaces' with type 'ros.ament_cmake' and name 'can_interfaces'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/swrob_can) by extension 'ros'
+[0.214s] DEBUG:colcon.colcon_core.package_identification:Package 'src/swrob_can' with type 'ros.ament_python' and name 'swrob_can'
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.238s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/lyx/Desktop/pc/SideWalkrobot_CAN/install
+[0.240s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 283 installed packages in /opt/ros/humble
+[0.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.291s] Level 5:colcon.colcon_core.verb:set package 'can_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.291s] DEBUG:colcon.colcon_core.verb:Building package 'can_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces', 'merge_install': False, 'path': '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/can_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'cmake_target' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'cmake_clean_cache' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'cmake_clean_first' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'cmake_force_configure' from command line to 'False'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'ament_cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'catkin_cmake_args' from command line to 'None'
+[0.292s] Level 5:colcon.colcon_core.verb:set package 'swrob_can' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.292s] DEBUG:colcon.colcon_core.verb:Building package 'swrob_can' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can', 'merge_install': False, 'path': '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can', 'symlink_install': False, 'test_result_base': None}
+[0.292s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.296s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.297s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/can_interfaces' with build type 'ament_cmake'
+[0.297s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/can_interfaces'
+[0.304s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.304s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.304s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.338s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can:/opt/ros/humble /home/lyx/.local/bin/cmake --build /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces -- -j2 -l2
+[0.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can:/opt/ros/humble /home/lyx/.local/bin/cmake --build /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces -- -j2 -l2
+[0.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can:/opt/ros/humble /home/lyx/.local/bin/cmake --install /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces
+[1.096s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can_interfaces)
+[1.097s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can:/opt/ros/humble /home/lyx/.local/bin/cmake --install /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/can_interfaces
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces' for CMake module files
+[1.104s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces' for CMake config files
+[1.104s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_interfaces', 'cmake_prefix_path')
+[1.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/cmake_prefix_path.ps1'
+[1.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/cmake_prefix_path.dsv'
+[1.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/cmake_prefix_path.sh'
+[1.108s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/lib'
+[1.109s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_interfaces', 'ld_library_path_lib')
+[1.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/ld_library_path_lib.ps1'
+[1.110s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/ld_library_path_lib.dsv'
+[1.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/ld_library_path_lib.sh'
+[1.112s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/bin'
+[1.112s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/lib/pkgconfig/can_interfaces.pc'
+[1.113s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/lib/python3.10/site-packages'
+[1.113s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/bin'
+[1.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.ps1'
+[1.126s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.dsv'
+[1.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.sh'
+[1.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.bash'
+[1.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.zsh'
+[1.132s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/colcon-core/packages/can_interfaces)
+[1.243s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can_interfaces)
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces' for CMake module files
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces' for CMake config files
+[1.245s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_interfaces', 'cmake_prefix_path')
+[1.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/cmake_prefix_path.ps1'
+[1.247s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/cmake_prefix_path.dsv'
+[1.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/cmake_prefix_path.sh'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/lib'
+[1.248s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_interfaces', 'ld_library_path_lib')
+[1.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/ld_library_path_lib.ps1'
+[1.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/ld_library_path_lib.dsv'
+[1.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/hook/ld_library_path_lib.sh'
+[1.250s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/bin'
+[1.250s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/lib/pkgconfig/can_interfaces.pc'
+[1.250s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/lib/python3.10/site-packages'
+[1.250s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/bin'
+[1.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.ps1'
+[1.252s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.dsv'
+[1.253s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.sh'
+[1.253s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.bash'
+[1.253s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/can_interfaces/package.zsh'
+[1.253s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/can_interfaces/share/colcon-core/packages/can_interfaces)
+[1.254s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can' with build type 'ament_python'
+[1.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('swrob_can', 'ament_prefix_path')
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/hook/ament_prefix_path.ps1'
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/hook/ament_prefix_path.dsv'
+[1.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/hook/ament_prefix_path.sh'
+[1.257s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.257s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.533s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can'
+[1.535s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.535s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.995s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can': PYTHONPATH=/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build install --prefix /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can --record /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/install.log --single-version-externally-managed
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can' for CMake module files
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can' for CMake config files
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib'
+[2.325s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/bin'
+[2.326s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/pkgconfig/swrob_can.pc'
+[2.326s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages'
+[2.326s] Level 1:colcon.colcon_core.shell:create_environment_hook('swrob_can', 'pythonpath')
+[2.327s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/hook/pythonpath.ps1'
+[2.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can' returned '0': PYTHONPATH=/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build install --prefix /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can --record /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/install.log --single-version-externally-managed
+[2.329s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/hook/pythonpath.dsv'
+[2.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/hook/pythonpath.sh'
+[2.330s] Level 1:colcon.colcon_core.environment:checking '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/bin'
+[2.330s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swrob_can)
+[2.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/package.ps1'
+[2.331s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/package.dsv'
+[2.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/package.sh'
+[2.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/package.bash'
+[2.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/swrob_can/package.zsh'
+[2.332s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/share/colcon-core/packages/swrob_can)
+[2.333s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.333s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.333s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.333s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.342s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.342s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.342s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.373s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.374s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/local_setup.ps1'
+[2.375s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/_local_setup_util_ps1.py'
+[2.376s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/setup.ps1'
+[2.377s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/local_setup.sh'
+[2.378s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/_local_setup_util_sh.py'
+[2.378s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/setup.sh'
+[2.379s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/local_setup.bash'
+[2.379s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/setup.bash'
+[2.380s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/local_setup.zsh'
+[2.380s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/setup.zsh'

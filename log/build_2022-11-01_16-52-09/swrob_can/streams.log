@@ -1,0 +1,30 @@
+[0.741s] Invoking command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can': PYTHONPATH=/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build install --prefix /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can --record /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/install.log --single-version-externally-managed
+[1.000s] running egg_info
+[1.001s] writing ../../build/swrob_can/swrob_can.egg-info/PKG-INFO
+[1.001s] writing dependency_links to ../../build/swrob_can/swrob_can.egg-info/dependency_links.txt
+[1.002s] writing entry points to ../../build/swrob_can/swrob_can.egg-info/entry_points.txt
+[1.002s] writing requirements to ../../build/swrob_can/swrob_can.egg-info/requires.txt
+[1.003s] writing top-level names to ../../build/swrob_can/swrob_can.egg-info/top_level.txt
+[1.005s] reading manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+[1.006s] writing manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+[1.007s] running build
+[1.007s] running build_py
+[1.007s] copying swrob_can/canbus.py -> /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build/lib/swrob_can
+[1.008s] copying swrob_can/CAN_Recv.py -> /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build/lib/swrob_can
+[1.008s] copying swrob_can/CAN_Send.py -> /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build/lib/swrob_can
+[1.009s] running install
+[1.009s] running install_lib
+[1.010s] copying /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build/lib/swrob_can/canbus.py -> /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can
+[1.011s] copying /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build/lib/swrob_can/CAN_Recv.py -> /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can
+[1.011s] copying /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build/lib/swrob_can/CAN_Send.py -> /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can
+[1.012s] byte-compiling /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can/canbus.py to canbus.cpython-310.pyc
+[1.013s] byte-compiling /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can/CAN_Recv.py to CAN_Recv.cpython-310.pyc
+[1.014s] byte-compiling /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can/CAN_Send.py to CAN_Send.cpython-310.pyc
+[1.015s] running install_data
+[1.016s] running install_egg_info
+[1.018s] removing '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info' (and everything under it)
+[1.018s] Copying ../../build/swrob_can/swrob_can.egg-info to /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info
+[1.019s] running install_scripts
+[1.040s] Installing canbus_node script to /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/swrob_can
+[1.041s] writing list of installed files to '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/install.log'
+[1.074s] Invoked command in '/home/lyx/Desktop/pc/SideWalkrobot_CAN/src/swrob_can' returned '0': PYTHONPATH=/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/swrob_can build --build-base /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/build install --prefix /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can --record /home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/install.log --single-version-externally-managed

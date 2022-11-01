@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/swrob_can/swrob_can.egg-info/PKG-INFO
+writing dependency_links to ../../build/swrob_can/swrob_can.egg-info/dependency_links.txt
+writing entry points to ../../build/swrob_can/swrob_can.egg-info/entry_points.txt
+writing requirements to ../../build/swrob_can/swrob_can.egg-info/requires.txt
+writing top-level names to ../../build/swrob_can/swrob_can.egg-info/top_level.txt
+reading manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+writing manifest file '../../build/swrob_can/swrob_can.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/swrob_can/swrob_can.egg-info to /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/python3.10/site-packages/swrob_can-0.0.0-py3.10.egg-info
+running install_scripts
+Installing canbus_node script to /home/lyx/Desktop/pc/SideWalkrobot_CAN/install/swrob_can/lib/swrob_can
+writing list of installed files to '/home/lyx/Desktop/pc/SideWalkrobot_CAN/build/swrob_can/install.log'

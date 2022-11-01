@@ -1,12 +1,15 @@
 from dataclasses import dataclass
+from sqlite3 import DatabaseError
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-
+from can_interfaces.msg import Can
 from .CAN_Recv import*
 from .CAN_Send import*
 from .Monitor import Motor_Monitor
 
+
+'''
 class MotorControlCan:
     def __init__(
         self,
@@ -19,6 +22,7 @@ class MotorControlCan:
         self.data = data
 
 MotorControl = MotorControlCan()
+'''
 
 
 class CanBus(Node):
@@ -30,16 +34,29 @@ class CanBus(Node):
     def __init__(self,name):
         super().__init__(name)
         self.get_logger().info("test node:%s" % name)
-        self.pub_data = self.create_publisher(Motor_Monitor,"motor",10)
-        self.time_period = 0.001
-        self.timer = self.create_timer(self.time_period,self.timer_callback)
+        #self.pub_data = self.create_publisher(String,"motor",10)
+        #self.time_period = 0.001
+       # self.timer = self.create_timer(self.time_period,self.timer_callback)
 
-        self.recv_data = self.create_subscription(MotorControlCan,"motorcontrol",self.recvdata_callback,10)
+        self.recv_data = self.create_subscription(Can,"motorcontrol",self.recvdata_callback,10)
 
-    def timer_callback(self):
-        self.pub_data(Motor1)
+    #def timer_callback(self):
+      #  self.pub_data(Motor1)
 
-    def recvdata_callback(self):
+    def recvdata_callback(self,message):
+        if message.data[0]==1:
+            Motor_Stop_Control("can0", message.data[1])
+        if message.data[0]==2:
+            PWM_Control("can0", message.data[1])
+        if message.data[0]==3:
+            Speed_Control("can0", message.data[1])
+        if message.data[0]==4:
+            Torque_Control("can0", message.data[1])
+
+        self.get_logger().info('use fuction%d data%d' %(message.data[0],message.data[1]))
+
+        
+        '''
         global MotorControl
         if MotorControl.num == 1:
             Motor_Stop_Control(MotorControl.id, 1, MotorControl.data)
@@ -49,6 +66,7 @@ class CanBus(Node):
             Speed_Contorl(MotorControl.id, 1, MotorControl.data)
         if MotorControl.num == 4:
             Torque_Contorl(MotorControl.id, 1, MotorControl.data)
+        '''
 
 
 
