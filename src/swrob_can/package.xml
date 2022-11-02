@@ -10,6 +10,7 @@
   <depend>rclpy</depend>
 
   <depend>can_interfaces</depend>
+  <depend>motordata_interfaces</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
