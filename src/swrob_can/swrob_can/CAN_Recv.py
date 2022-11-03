@@ -6,6 +6,7 @@ from can.notifier import MessageRecipient
 
 from .CAN_Send import*
 from .Monitor import*
+
 Motor1 = Motor_Monitor('left', 0x602, 'can0')
 # The motor ID. 
 CAN_ID = [0x602, 0x603]
@@ -89,11 +90,13 @@ def Solve_Message(msg: can.Message) -> None:
         Recv = Unpack_Packages(msg)
         Motor1.GetParameters(Recv,Recv['Index'])   
 
-async def main() -> None:
+async def Get_CAN_Message() -> Motor1:
     """The main function that runs in the loop."""
 
     with can.Bus(  # type: ignore
-         channel="can0", bustype= 'socketcan'
+         channel="can0", 
+         bustype= 'socketcan', 
+         can_filters=[{"can_id": 0x582,"extended": False}]
     ) as bus:
         reader = can.AsyncBufferedReader()
         logger = can.Logger("logfile.asc") # Create log file to check the log information
@@ -125,11 +128,12 @@ async def main() -> None:
         await reader.get_message()
         print("Done!")
         print(Motor1.__dict__)
+        return Motor1
 
         # Clean-up
         notifier.stop()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(Get_CAN_Message())
     print("Finish!")

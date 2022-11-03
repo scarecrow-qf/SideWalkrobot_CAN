@@ -39,7 +39,6 @@ def Send_Package(CAN_ID, CAN_Channel, Write_Byte_Num, Index_num, data):
     canx = can.interface.Bus(channel = CAN_Channel, bustype = 'socketcan')# socketcan_native
     canx.send(msg)
     print(msg)
-    print('\n')
     # Do not close CAN
 
 
@@ -53,16 +52,16 @@ def Motor_Stop_Control(CAN_Channel, Stop_Mode):
     CAN_ID: you may have more than one motors, so the CAN_ID must be a list
     Stop_Mode: There are 3 Mode to stop motors
         Normal stop, Emergency stop and Free stop.
-        Normal stop: stop by your own set parameters.
-        Emergency stop: stop by your own set emergency parameters.
-        Free stop: shut down the power and stop motors by resistance 
+        1:Normal stop--stop by your own set parameters.
+        2:Emergency stop--stop by your own set emergency parameters.
+        3.Free stop--shut down the power and stop motors by resistance 
     '''
     for index,ID in enumerate(CAN_ID):
-        if Stop_Mode == 'Normal':
+        if Stop_Mode == 1:
             Send_Package(CAN_Channel, 1, 0x2000, [0x10,0x00,0x00,0x00])
-        elif Stop_Mode == 'Emergency':
+        elif Stop_Mode == 2:
             Send_Package(CAN_Channel, 1, 0x2000, [0x11,0x00,0x00,0x00])
-        elif Stop_Mode == 'Free':
+        elif Stop_Mode == 3:
             Send_Package(CAN_Channel, 1, 0x2000, [0x12,0x00,0x00,0x00])
 
 def PWM_Control(CAN_Channel, PWM_Duty_Cycle):
@@ -103,7 +102,6 @@ def Speed_Control(CAN_Channel, Speed):
     # set mode as speed control mode
     Send_Package(CAN_ID[0], CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
     Send_Package(CAN_ID[1], CAN_Channel, 1, 0x2000, [0x01,0x00,0x00,0x00])
-    # Setting register 0x0077 as 45. Because the number of motor poles is 45.
     # And the parameter can be set by GUI tool, So we do not need set.
 
     # Setting register 0x200A as 1 which change the motor mode to RPM control mode
@@ -129,8 +127,8 @@ def Torque_Control(CAN_Channel, Current):
     :Current: -max current ~ max current(set by youself)
     '''
     # set mode as torque control mode
-    Send_Package(CAN_Channel, 1, 0x2000, [0x02,0x00,0x00,0x00])
-
+    Send_Package(CAN_ID[0], CAN_Channel, 1, 0x2000, [0x02,0x00,0x00,0x00])
+    Send_Package(CAN_ID[1], CAN_Channel, 1, 0x2000, [0x02,0x00,0x00,0x00])
     # The actual current is the send_data*0.01(A)
     data = [0x00,0x00,0x00,0x00]
     # Put lower byte in front
@@ -138,7 +136,8 @@ def Torque_Control(CAN_Channel, Current):
         digit = i*8
         data[i] = (Current >> digit) & 0xFF
     # Send message
-    Send_Package(CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_ID[0], CAN_Channel, 4, 0x2001, data)
+    Send_Package(CAN_ID[1], CAN_Channel, 4, 0x2001, data)
 
 def Angle_continuity():
     angle = 0
@@ -192,10 +191,14 @@ def Position_Contorl(CAN_Channel, Location_Type, Target_Location):
 
 
 if __name__ == "__main__":
-    # tips
-    # These two line code should be put into Startup script
-    #os.system('sudo ip link set can0 up type can bitrate 500000')
-    #os.system('sudo ifconfig can0 txqueuelen 65536')
+    '''
+    tips
+    These two line code should be put into Startup script
+    os.system('sudo ip link set can0 up type can bitrate 500000')
+    os.system('sudo ifconfig can0 txqueuelen 65536')
+    '''
+
+    '''debug'''
     #speed = sys.argv[1]
     #if_stop = sys.argv[2]
     
@@ -203,16 +206,3 @@ if __name__ == "__main__":
         print('------------------------------')
         #Send_Package(0x602, 'can0', 1, 0x2000, [0x01,0x00,0x00,0x00])
         #Recv = Receive_Package('can0')
-        #time.sleep(2)
-
-
-    '''
-    if if_stop == 'n':
-        PWM_Contorl(0x602, 'can0', int(speed))
-    Speed_Contorl(0x602, 'can0', int(speed))
-    Torque_Contorl(0x602,'can0',0)
-    else:
-        Motor_Stop_Control([0x602], 'can0', 'Free')
-    '''
-
-  

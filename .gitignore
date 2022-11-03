@@ -1,0 +1,6 @@
+/build
+/install
+/log
+/src/swrob_can/swrob_can/logfile.asc
+/src/swrob_can/test
+src/**/test
